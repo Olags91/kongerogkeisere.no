@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Konger og Keisere – norsk rock siden 2015</title>
+  <meta name="description" content="Konger og Keisere er et norsk rockeband, aktive siden 2015. Book bandet, se konserter, hør musikken og kjøp merch.">
+  <meta property="og:title" content="Konger og Keisere">
+  <meta property="og:description" content="Norsk rock siden 2015.">
+  <meta property="og:type" content="website">
+  <!-- TODO: legg til og:image (f.eks. bilder/delingsbilde.jpg, 1200x630) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="#top">Konger <span>og</span> Keisere</a>
+  <button class="nav-toggle" aria-label="Meny" aria-expanded="false">☰</button>
+  <nav id="nav">
+    <a href="#om">Om oss</a>
+    <a href="#konserter">Konserter</a>
+    <a href="#musikk">Musikk</a>
+    <a href="#galleri">Galleri</a>
+    <a href="#shop">Shop</a>
+    <a href="#booking" class="btn-nav">Book oss</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="kicker">Norsk rock · siden 2015</p>
+      <h1>Konger<br><span>og</span> Keisere</h1>
+      <p class="lead">Høyt, ærlig og på norsk.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#konserter">Se konserter</a>
+        <a class="btn btn-ghost" href="#booking">Book bandet</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="om" class="section">
+    <h2>Om bandet</h2>
+    <div class="two-col">
+      <div>
+        <p>Konger og Keisere er et norsk rockeband som har spilt sammen siden 2015. Fra små klubbscener til festivaler har vi vært på veien med én ting i bagasjen: sanger vi mener noe med.</p>
+        <p>Skriv en kort og fengende presentasjon her: hvor dere kommer fra, hva som gjør lyden deres, og hva publikum kan forvente seg.</p>
+      </div>
+      <div>
+        <h3>Besetning</h3>
+        <ul class="members" id="members"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="konserter" class="section alt">
+    <h2>Konserter</h2>
+    <h3>Kommende</h3>
+    <div id="upcoming" class="list"></div>
+    <h3>Tidligere konserter</h3>
+    <div id="past"></div>
+  </section>
+
+  <section id="musikk" class="section">
+    <h2>Musikk</h2>
+    <p>Hør oss der du vanligvis hører musikk.</p>
+    <div class="links" id="streaming"></div>
+    <div class="embed">
+      <!-- TODO: bytt ut med egen Spotify-embed: Del → Bygg inn → kopier iframe -->
+      <div class="placeholder">Spotify-spiller kommer her</div>
+    </div>
+    <h3>Video</h3>
+    <div class="video-grid" id="videos"></div>
+  </section>
+
+  <section id="galleri" class="section alt">
+    <h2>Bilde- og videoarkiv</h2>
+    <p>Fra scenen, øvingslokalet og veien imellom.</p>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <section id="shop" class="section">
+    <h2>Shop</h2>
+    <p>Støtt bandet og ta med deg et stykke Konger og Keisere hjem.</p>
+    <div class="products" id="products"></div>
+    <p class="small">Betaling skjer trygt via ekstern betalingsleverandør.</p>
+  </section>
+
+  <section id="booking" class="section alt">
+    <h2>Booking</h2>
+    <div class="two-col">
+      <div>
+        <p>Vil du ha Konger og Keisere til klubb, festival, firmafest eller privat arrangement? Send oss en melding med dato, sted og type arrangement, så svarer vi raskt.</p>
+        <ul class="contact">
+          <li><strong>Booking:</strong> <a href="mailto:booking@dittdomene.no">booking@dittdomene.no</a></li>
+          <li><strong>Kontaktperson:</strong> Navn Navnesen, 000 00 000</li>
+          <li><strong>Teknisk rider / stageplot:</strong> <a href="#">Last ned PDF</a></li>
+          <li><strong>Presse-kit (bilder, tekst):</strong> <a href="#">Last ned</a></li>
+        </ul>
+      </div>
+      <!-- TODO: bytt YOUR_FORM_ID med ID fra formspree.io (gratis), eller fjern skjemaet og bruk kun e-post -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form">
+        <label>Navn<input name="name" required></label>
+        <label>E-post<input type="email" name="email" required></label>
+        <label>Dato og sted<input name="event"></label>
+        <label>Melding<textarea name="message" rows="5" required></textarea></label>
+        <button class="btn" type="submit">Send forespørsel</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="links" id="socials"></div>
+  <p>© <span id="year"></span> Konger og Keisere</p>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden><img alt=""><button aria-label="Lukk">✕</button></div>
+
+<script src="script.js"></script>
+</body>
+</html>
